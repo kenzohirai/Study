@@ -16,14 +16,21 @@ class TableViewController: UITableViewController {
     // cellのlabelに書く文字列
     let name1: [String] = ["数学", "国語", "英語", "理科", "社会"]
     
-    
-   
-    
     // 遷移先のViewControllerに渡す変数
     var giveData: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
+        var imageView = UIImageView(frame: CGRect(x: 0,y: 0, width: self.tableView.frame.width, height: self.tableView.frame.height))
+        
+        let image = UIImage(named: "グラデーション勉強.jpg")
+        
+        imageView.image = image
+        imageView.alpha = 1.0
+        
+        self.tableView.backgroundView = imageView
         
         
         var rect = view.bounds

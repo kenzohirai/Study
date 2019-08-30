@@ -94,7 +94,7 @@ class SleepingViewController: UIViewController {
         //経過時間にプラス1をしていく
         count += 1
         //残り時間0でタイマー停止
-        if displayUpDate() <  0 {
+        if displayUpDate() == 0 {
             //初期化
             count = 0
             //タイマー停止
